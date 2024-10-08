@@ -228,6 +228,7 @@ body {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
 	padding-bottom: 2rem;
 }
 
@@ -235,7 +236,8 @@ body {
 	font-size: 1.5rem;
 	text-align: center;
 	text-decoration: none;
-	margin: 1rem 0.5rem;
+	margin: 1rem 0.7rem;
+	border-radius: 50%;
 }
 
 .fa-brands:hover {
@@ -257,11 +259,12 @@ body {
 	.image-text {
 		font-size: 5vw;
 	}
-	.footer {
+	/* .footer {
 		flex-direction: column;
-	}
+	} */
 	.footer-links {
 		font-size: 2rem;
+		margin: 1.5rem 1rem;
 	}
 }
 

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+			integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+	</head>
+	<body>
+		<div class="image-container">
+			<img class="hero-image" src="hero.png" alt="Snow" style="height: 800px" />
+			<h1 class="image-title">ROXFORD</h1>
+			<h1 class="image-text">ТИІМДІ БАҒАҒА САПАЛЫ ҰБТ КУРСЫ</h1>
+		</div>
+		<main class="main-container">
+			<div class="form-container">
+				<div class="logo-container">Тегін консультация алу үшін👇🏻</div>
+				<form class="form" id="my-form" method="POST">
+					<!-- target="hidden-iframe" -->
+					<div class="form-group">
+						<label for="name">Аты-жөнің</label>
+						<input
+							type="text"
+							id="name"
+							name="entry.1537435478"
+							placeholder="Аты-жөніңді жазып кет"
+							required
+						/>
+					</div>
+					<div class="form-group">
+						<label for="phone">Телефон нөмірің</label>
+						<input
+							type="text"
+							id="phone"
+							name="entry.1907448561"
+							placeholder="Телефон нөміріңді жазып кет"
+							required
+						/>
+					</div>
+					<div class="form-group">
+						<label for="lesson">Таңдау пәнің</label>
+						<input
+							type="text"
+							id="lesson"
+							name="entry.1034865502"
+							placeholder="Таңдау пәніңді жазып кет"
+							required
+						/>
+					</div>
+					<p id="error-message" style="color: red; display: none">Форманы толық толтыру қажет!</p>
+					<button class="form-submit-btn" type="submit">Жіберу</button>
+				</form>
+			</div>
+		</main>
+		<!-- <iframe name="hidden-iframe" style="display: none"></iframe> -->
+		<script src="script.js"></script>
+	</body>
+</html>

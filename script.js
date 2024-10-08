@@ -8,17 +8,26 @@ form.addEventListener('submit', function (event) {
 	const lesson = document.getElementById('lesson').value.trim();
 
 	if (name === '' || phone === '' || lesson === '') {
-		event.preventDefault();
 		errorMessage.style.display = 'block';
+		return;
 	} else {
 		errorMessage.style.display = 'none';
-		const formData = new FormData(form);
-		const xhr = new XMLHttpRequest();
-		const sendingData = new URLSearchParams(formData).toString();
-		const formURL =
-			'https://docs.google.com/forms/d/e/1FAIpQLSeZG0ZFC29GESiazhx4reSPvPo1OV5IVrz1AIDSfzp-myHZWg/formResponse';
-		xhr.open('POST', formURL, true);
-		xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-		xhr.send(sendingData);
 	}
+
+	const formData = new URLSearchParams();
+	formData.append('entry.1537435478', name);
+	formData.append('entry.1907448561', phone);
+	formData.append('entry.1034865502', lesson);
+
+	fetch('https://docs.google.com/forms/d/e/1FAIpQLSeZG0ZFC29GESiazhx4reSPvPo1OV5IVrz1AIDSfzp-myHZWg/formResponse', {
+		method: 'POST',
+		body: formData,
+		mode: 'no-cors',
+	})
+		.then((response) => {
+			console.log('Form submitted successfully');
+		})
+		.catch((error) => {
+			console.error('Error submitting form:', error);
+		});
 });

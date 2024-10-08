@@ -89,10 +89,14 @@ body {
 .image-container {
 	position: relative;
 	text-align: center;
+	width: 100%;
+	height: 100%;
 }
 
 .hero-image {
 	margin: 0 auto;
+	width: auto;
+	height: 800px;
 }
 
 .image-title,
@@ -158,7 +162,8 @@ body {
 
 /* Form */
 .form-container {
-	width: 500px;
+	width: 90%;
+	max-width: 500px;
 	background-color: #fff;
 	padding: 32px 24px;
 	font-size: 14px;
@@ -245,4 +250,33 @@ body {
 .form-submit-btn:active {
 	color: hsl(0, 0%, 0%);
 	box-shadow: rgb(255, 233, 35) 0px 0px 0px 0px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+	.hero-image {
+		height: 600px;
+	}
+	.image-title {
+		font-size: 10vw;
+	}
+	.image-text {
+		font-size: 5vw;
+	}
+}
+
+@media (max-width: 480px) {
+	.hero-image {
+		height: 400px;
+	}
+	.form-container {
+		width: 95%;
+		padding: 16px;
+	}
+	.form-container .logo-container {
+		font-size: 16px;
+	}
+	.form-container .form-submit-btn {
+		padding: 10px;
+	}
 }
